@@ -1,0 +1,36 @@
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+<ul>
+  <li><mat-icon>home</mat-icon> <span><a href="#home">  Home</a></span> </li>
+  <li><mat-icon> contact_phone</mat-icon>Contact</li>
+  <li><mat-icon> local_laundry_service</mat-icon>Services </li>
+  <li><mat-icon>person</mat-icon>About Us</li>
+</ul>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer class="mat-drawer-inner" mode="push"  role="navigation">
+    <mat-nav-list>
+      <a mat-list-item routerLink='/home'><mat-icon>home</mat-icon>Home</a>
+      <a mat-list-item routerLink='/contact'><mat-icon> contact_phone</mat-icon>Contact</a>
+      <a mat-list-item routerLink='/about-us'><mat-icon>person</mat-icon>
+        About Us</a>
+      <a mat-list-item routerLink='/services'><mat-icon> local_laundry_service</mat-icon>Services</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<footer>
+  &copy; All Rights Reserved 2020
+</footer>

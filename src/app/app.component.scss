@@ -1,0 +1,60 @@
+.example-container{
+
+height: 100%;
+margin:0;
+padding:0
+}
+
+mat-toolbar{
+  //height: 64px;
+
+  z-index: 1000;
+  width: 100%  !important;
+
+}
+
+mat-toolbar-row{
+  float: right;
+text-align: right;
+}
+ul>li{
+  display: inline;
+  padding-left:10px;
+  color: black;
+  list-style-type: none;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+ul>li:hover{
+  color: green;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-drawer-inner{
+
+  width: 300px;
+
+}
+
+
+mat-icon{
+  padding-right: 5px;
+}
+ul>li>mat-icon{
+display: inline;
+}
+
+footer{
+  padding:20px;
+  background: gray;
+  text-align: center;
+}
